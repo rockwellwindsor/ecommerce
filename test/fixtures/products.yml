@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: Product 1
+  description: So many description
   image_file_file_name: 1.jpg
   gender: mens
   price: 9.99
 
 two:
-  title: MyString
-  description: MyText
+  title: Product 2
+  description: So many more description
   image_file_file_name: 2.jpg
   gender: womens
   price: 9.99

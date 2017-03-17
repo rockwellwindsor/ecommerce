@@ -8,7 +8,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       description: 'This is awesome',
       image_file_file_name: '3.jpg',
       gender: 'neutral',
-      price: 12.00
+      price: 120
     }
   end
 
