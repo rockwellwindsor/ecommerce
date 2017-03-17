@@ -1,8 +1,12 @@
 class Product < ApplicationRecord
 
+    # Filters
+    before_destroy :ensure_not_referenced_by_a_line_item
+
     # Associations
     belongs_to :category
-    
+    has_many :line_items
+
     # Validations
     validates :title, :description, :image_file, presence: true
     validates :title, uniqueness: true
@@ -17,4 +21,13 @@ class Product < ApplicationRecord
 
     # Enumerators
     enum gender: { neutral: 0 , mens: 1, womens: 2, kids: 3 }
+
+    private
+
+    def ensure_not_referenced_by_a_line_item
+        unless line_items.empty?
+            errors.add(:base, 'Line items present.')
+            throw :abort
+        end
+    end
 end
