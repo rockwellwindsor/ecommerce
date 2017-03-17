@@ -3,11 +3,13 @@
 one:
   title: MyString
   description: MyText
-  image_file: 
+  image_file_file_name: 1.jpg
+  gender: mens
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_file: 
+  image_file_file_name: 2.jpg
+  gender: womens
   price: 9.99
