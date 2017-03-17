@@ -1,9 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  value: MyString
+  title: site_name
+  value: Test site name
 
 two:
-  title: MyString
-  value: MyString
+  title: site_contact_email
+  value: test@testsiteemail.com
+
+three:
+  title: site_logo
+  value: default.png
+

@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: Jewerley
+  description: So sparkley
 
 two:
-  title: MyString
-  description: MyText
+  title: Shirts
+  description: I can put them on
+
+three:
+  title: Pants
+  description: Love wearing pants
+
+four:
+  title: Coats
+  description: I love being warm

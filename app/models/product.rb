@@ -1,10 +1,12 @@
 class Product < ApplicationRecord
 
+    # Associations
+    belongs_to :category
+    
     # Validations
     validates :title, :description, :image_file, presence: true
     validates :title, uniqueness: true
     validates :price, numericality: { greater_than_or_equal_to: 0.51 }
-
     validates :image_file, allow_blank: true, format: {
         with:    %r{\.(gif|jpg|png)\Z}i,
         message: 'must be a URL for GIF, JPG or PNG image.'
@@ -14,5 +16,5 @@ class Product < ApplicationRecord
     validates_attachment :image_file, :presence => true, :content_type => { :content_type => /\Aimage\/.*\Z/ }, :size => { :less_than => 4.megabyte }
 
     # Enumerators
-    enum gender: { neutral: 0 , mens: 1, womens: 2 }
+    enum gender: { neutral: 0 , mens: 1, womens: 2, kids: 3 }
 end
