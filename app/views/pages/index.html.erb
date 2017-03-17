@@ -1,2 +1,13 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Your catalog</h1>
+
+<%= @products.each do | product | %>
+    <div class="entry">
+        <img src="/images/product/<%= product.image_file_file_name %>"/>
+        <h3><%= product.title %></h3>
+        <%= sanitize(product.description) %>
+        <div class="price_line">
+            <span class="price"><%= product.price %></span>
+        </div>
+    </div>
+<% end %>

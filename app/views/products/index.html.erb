@@ -14,12 +14,12 @@
           <dt><%= product.title %></dt>
           <dt><%= product.price %></dt>
           <dt><%= truncate(strip_tags(product.description), length: 80) %></dt>
-        </dl>  
-      </td>           
+        </dl>
+      </td>
       <td class="list_actions">
         <%= link_to 'Show', product %>
         <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>       
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
   <% end %>

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :settings
+    resources :categories
     get 'pages/index'
     get 'pages/about'
+    get 'pages/contact'
     root 'pages#index'
 
     resources :products

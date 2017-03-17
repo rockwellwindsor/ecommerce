@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    
+
         <link rel="shortcut icon" href="/favicon.png">
 
         <title>Store</title>
@@ -11,7 +11,11 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
-    <body class="<%= controller.controller_name %> <%= controller.controller_name %>-<%= controller.action_name %>">
-        <%= yield %>
+    <body class="<%= controller.controller_name %>">
+
+        <%= render 'layouts/sidebar' %>
+        <div class="<%= controller.controller_name %>-<%= controller.action_name %>">
+            <%= yield %>
+        </div>
     </body>
 </html>
