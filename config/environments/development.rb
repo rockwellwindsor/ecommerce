@@ -29,7 +29,24 @@ Rails.application.configure do
   config.action_cable.disable_request_forgery_protection = true
   
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  Rails.application.routes.default_url_options[:host] = "localhost:3000"
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    :from =>  ENV["EMAIL"],
+    :user_name => ENV["SENDGRID_USERNAME"],
+    :password => ENV["SENDGRID_PASSWORD"],
+    :domain => "localhost:3000",
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   config.action_mailer.perform_caching = false
 
