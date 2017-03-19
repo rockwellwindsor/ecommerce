@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Test User
+  address: 4525 Bonner Ln.
+  email: testuser@testuser.com
+  pay_type: check
+
+two:
+  name: User Test
+  address: 4525 Test User ave.
+  email: usertest@testuseruser.com
+  pay_type: credit card

@@ -6,6 +6,7 @@ class Product < ApplicationRecord
     # Associations
     belongs_to :category
     has_many :line_items
+    has_many :orders, through: :line_items
 
     # Validations
     validates :title, :description, :image_file, presence: true
