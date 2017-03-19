@@ -78,7 +78,9 @@ class CartsController < ApplicationController
     end
 
     def invalid_cart
+      #  Use the rails logger to record the error.
       logger.error "Attempt to access an invalid cart #{params[:id]}"
+      # Redirect and flash a message.
       redirect_to store_index_url, notice: 'Invalid cart'
     end
 end
