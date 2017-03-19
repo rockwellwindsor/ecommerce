@@ -19,8 +19,10 @@
         <div class="columns">
             <div id="side">
                 <div id="cart">
-                    <% if @cart.line_items.any? %>
-                        <%= render @cart %>
+                    <% if user_signed_in? %>
+                        <% if @cart.line_items.any? %>
+                            <%= render @cart %>
+                        <% end %>
                     <% end %>
                 </div>
                 
