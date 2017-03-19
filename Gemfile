@@ -39,6 +39,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 # Image uploads with paperclip
 gem 'paperclip'
+# User Authentication
+gem 'devise'
+gem 'omniauth'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
