@@ -14,7 +14,7 @@ class Cart < ApplicationRecord
     end
 
     def total_price
-        # Turn it into and array and sum the array
+        # Return total price of cart by turning it into an array and summing the array.
         line_items.to_a.sum { | item | item.total_price }
     end
 
